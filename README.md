@@ -43,4 +43,18 @@ posteriormente probamos que este funcionando correctamente:
 y finalmente evidenciamos que el servidor tambien cerro su conexion:  
 ![url](imagenes/trigonometricasclose.JPG)  
 
+## servidor paginas html e imagenes
+para este punto podemos modificar ligeramente el codigo URLReader de tal manera que en vez de buscar una sola pagina  
+podamos buscar las que deseemos y cada una de ellas guardarla con un nombre distinto, la modificacion es la siguiente:  
+![url](imagenes/paginascode.JPG)  
+posteriormente ponemos a correr el cliente y el servidor:  
+![url](imagenes/paginasserver.JPG)  
+![url](imagenes/paginascliente.JPG)  
+y probamos que este funcionando correctamente:  
+![url](imagenes/paginasresult.JPG)  
+![url](imagenes/paginasresult1.JPG)  
+y verificamos que el servidor tambien cierra la conexion:  
+![url](imagenes/paginasclose.JPG)  
+
+
 

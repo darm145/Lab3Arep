@@ -5,6 +5,7 @@ import java.io.*;
 public class HttpServer {
  public static void main(String[] args) throws IOException {
   ServerSocket serverSocket = null;
+  int solicitud;
   try {
    serverSocket = new ServerSocket(2000);
   } catch (IOException e) {
@@ -23,15 +24,28 @@ public class HttpServer {
   BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
   String inputLine, outputLine;
   out.println("conectado al servidor de paginas html e imagenes");
+  out.println("por favor ingrese las URL de las paginas a visitar.");
+  out.println("el archivo html sera guardado como request(nrosolicitud).html");
+  out.println("escriba cerrar para finalizar la conexion");
   out.println();
+  solicitud=1;
   while ((inputLine = in .readLine()) != null) {
    System.out.println("Received: " + inputLine);
-   if (! in .ready()) {
-    break;
+   if (inputLine.equals("cerrar")) {
+	   out.println("Conexion cerrada");
+	   break;
+   }
+   try {
+	   URLReader.Pagina(inputLine, solicitud);
+	   out.println("html guardado correctamente con el nombre requestnro"+solicitud+".html");
+	   solicitud++;
+	   
+   }
+   catch(MalformedURLException e) {
+	   out.println("URL mal escrita por favor repitala");
    }
   }
-  outputLine = "<!DOCTYPE html>" + "<html>" + "<head>" + "<meta charset=\"UTF-8\">" + "<title>Title of the document</title>\n" + "</head>" + "<body>" + "My Web Site" + "</body>" + "</html>" + inputLine;
-  out.println(outputLine);
+  
   out.close(); in .close();
   clientSocket.close();
   serverSocket.close();
