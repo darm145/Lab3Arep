@@ -55,6 +55,18 @@ y probamos que este funcionando correctamente:
 ![url](imagenes/paginasresult1.JPG)  
 y verificamos que el servidor tambien cierra la conexion:  
 ![url](imagenes/paginasclose.JPG)  
+## Servidor datagramas(hora)
+para el siguiente servidor usamos los codigos suministrados y les aplicamos ciertas modificaciones para que cumplan 
+los requerimientos solicitados, dichas modificaciones se pueden encontrar en el codigo fuente.  
+procedemos a inicar el servidor:  
+![url](imagenes/horaserver.JPG)  
+a continuacion procedemos a iniciar el cliente y que empiece a recibir los datagramas inmediatamente:
+![url](imagenes/horacliente.JPG)  
+como vemos funciona correctamente, para finalzar realizamos la prueba cerrardo el servidor y volviendolo a iniciar 
+donde obtenemos lo siguiente:
+![url](imagenes/horaprueba.JPG) 
+y notamos que esta funcionando correctamente segun las especificaciones dadas.
+
 
 
 
