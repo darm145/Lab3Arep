@@ -1,4 +1,26 @@
-# networkinglab
+# Clientes y servicios
+
+## Iniciando
+las siguientes instrucciones son para correr y desplegar el proyecto localmente
+### prerequisitos
+- Maven 3.6. en caso de no tenerlo seguir las siguientes instrucciones de acuerdo al sistema operativo . [How to install maven](https://maven.apache.org/install.html)
+ - JDK (Java Development Kit) 1.8. en caso de no tenerlo seguir las siguientes instrucciones. [Java SE Development Kit 8](https://www.oracle.com/java/technologies/jdk8-downloads.html)
+ - Git bash. en caso de no tenerlo seguir las siguientes instrucciones [GIT](https://git-scm.com/) y aqui una documentación. [GIT DOCS](https://git-scm.com/docs)
+ ### instalacion y despliegue local
+ Clonar el proyecto:
+
+    git clone https://github.com/darm145/Lab3Arep
+
+navegar en los archivos con cd hasta estar en la raiz del proyecto
+
+    cd Lab3Arep
+
+compilarlo y ejecutarlo
+
+    mvn package
+    mvn exec:java-Dexec.mainClass="eci.networkproject.{clase a correr}"
+
+la clase a correr depende del servidor a testear.
 ## URL DATA
 para cada uno de los valores generamos el print el cual podemos encontrar en el archivo URLData.java, y para la siguiente URL:  
 ![url](imagenes/url.PNG)  
@@ -67,6 +89,11 @@ donde obtenemos lo siguiente:
 ![url](imagenes/horaprueba.JPG) 
 y notamos que esta funcionando correctamente segun las especificaciones dadas.
 
+## Construido con
+[Maven](https://maven.apache.org/) - Dependency Management
 
+## Autor
+David Daniel A. Ramirez Moreno- [GitHub](https://github.com/darm145) - Escuela Colombiana de Ingeniería Julio Garavito
 
-
+## License
+This project is under GNU General Public License - see  [LICENSE](https://github.com/darm145/Lab3Arep/blob/master/LICENSE) to more info.
