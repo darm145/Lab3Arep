@@ -6,7 +6,7 @@ public class Cliente {
  public static void main(String[] args) throws IOException {
   Socket echoSocket = null;
   PrintWriter out = null;
-  BufferedReader in = null;
+  BufferedReader in = null; 
 
   try {
    echoSocket = new Socket("127.0.0.1", 2000);
